@@ -48,7 +48,7 @@ public class TransferAggregator {
             String line;
             while ((line = br.readLine()) != null) {
                 elements = line.split(",");
-                lines.add(new Transfer(elements[0], elements[1], (long) Integer.parseInt(elements[2])));
+                lines.add(new Transfer(elements[0], elements[1], Integer.parseInt(elements[2])));
             }
         } catch (IOException ioe) {
             throw new IllegalStateException("File beolvasási hiba", ioe);
